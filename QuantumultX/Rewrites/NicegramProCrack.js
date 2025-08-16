@@ -1,5 +1,4 @@
-# /***********************************
-
+# 
 # > 应用名称：Nicegram
 # > 软件版本：1.5.6
 # > 脚本作者：ddgksf2013
@@ -18,14 +17,13 @@
 [rewrite_local]
   
 # > Nicegram☆解锁会员权限（2024-02-24）@ddgksf2013
-^https?:\/\/nicegram\.cloud\/api\/v\d\/(ai-assistant\/purchase-list|user\/info|telegram\/auth) url script-response-body https://github.com/ddgksf2013/MoYu/raw/master/NicegramProCrack.js
+^https?:\/\/nicegram\.cloud\/api\/v\d\/(ai-assistant\/purchase-list|user\/info|telegram\/auth) url script-response-body https://raw.githubusercontent.com/jyewong/OnlineSharedFiles/refs/heads/main/QuantumultX/Rewrites/NicegramProCrack.js
 
 [mitm] 
 
 hostname=nicegram.cloud
 
-# ***********************************/
-
+# 
 
 var body=$response.body.replace(/subscription":\w+/g,'subscription":true');
 $done({body});
